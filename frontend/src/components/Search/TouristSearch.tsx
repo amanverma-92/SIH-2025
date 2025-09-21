@@ -56,12 +56,12 @@ export default function TouristSearch({
     }
   };
 
-  const handleCreateTourist = async (data: CreateTouristData) => {
+  const handleCreateTourist = async (data: CreateTouristData | UpdateTouristData) => {
     if (!onTouristCreate) return;
     
     try {
       setIsSubmitting(true);
-      await onTouristCreate(data);
+      await onTouristCreate(data as CreateTouristData);
       setShowForm(false);
       toast.success('Tourist created successfully!');
     } catch (error) {
@@ -282,6 +282,7 @@ export default function TouristSearch({
         {editingTourist && (
           <TouristForm
             tourist={editingTourist}
+            digitalId={editingTourist.digital_id}
             onSubmit={handleUpdateTourist}
             onCancel={() => setEditingTourist(null)}
             isLoading={isSubmitting}

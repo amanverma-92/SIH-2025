@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { cn } from '@/utils/cn';
 import { CreateTouristData, UpdateTouristData } from '@/utils/api';
+import { DigitalIDCard } from '@/components/DigitalID';
 
 const touristSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -22,8 +23,27 @@ const touristSchema = z.object({
 
 type TouristFormData = z.infer<typeof touristSchema>;
 
+interface DigitalIDData {
+  id: number;
+  kyc_id: string;
+  status: string;
+  valid_from: string;
+  valid_to: string;
+  public_address?: string;
+  block_hash?: string;
+  verification_hash?: string;
+  blockchain_id?: number;
+  tx_hash?: string;
+  contract_address?: string;
+  chain_id?: number;
+  decentralized_status: string;
+  block_index?: number;
+  timestamp?: string;
+}
+
 interface TouristFormProps {
   tourist?: CreateTouristData | UpdateTouristData;
+  digitalId?: DigitalIDData;
   onSubmit: (data: CreateTouristData | UpdateTouristData) => void;
   onCancel: () => void;
   isLoading?: boolean;
@@ -32,6 +52,7 @@ interface TouristFormProps {
 
 export default function TouristForm({ 
   tourist, 
+  digitalId,
   onSubmit, 
   onCancel, 
   isLoading = false,
@@ -46,19 +67,19 @@ export default function TouristForm({
     watch,
   } = useForm<TouristFormData>({
     resolver: zodResolver(touristSchema),
-    defaultValues: tourist || {
-      name: '',
-      email: '',
-      phone: '',
-      latitude: 0,
-      longitude: 0,
-      emergency_contact: '',
-      status: 'active',
+    defaultValues: {
+      name: tourist?.name || '',
+      email: tourist?.email || '',
+      phone: tourist?.phone || '',
+      latitude: tourist?.latitude || 0,
+      longitude: tourist?.longitude || 0,
+      emergency_contact: tourist?.emergency_contact || '',
+      status: (tourist && 'status' in tourist ? tourist.status as 'active' | 'inactive' | 'emergency' : undefined) || 'active',
     },
   });
 
   const handleFormSubmit = (data: TouristFormData) => {
-    onSubmit(data);
+    onSubmit(data as CreateTouristData | UpdateTouristData);
   };
 
   return (
@@ -236,7 +257,7 @@ export default function TouristForm({
               </select>
             </div>
           )}
-
+          
           {/* Actions */}
           <div className="flex space-x-3 pt-4">
             <button
@@ -262,6 +283,13 @@ export default function TouristForm({
             </button>
           </div>
         </form>
+
+        {/* Digital ID Display */}
+        {digitalId && (
+          <div className="mt-6">
+            <DigitalIDCard digitalId={digitalId} />
+          </div>
+        )}
       </motion.div>
     </motion.div>
   );

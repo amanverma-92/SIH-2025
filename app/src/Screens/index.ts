@@ -5,4 +5,6 @@ export { default as HomeScreen } from './HomeScreen';
 export { default as TouristIDScreen } from './TouristIDScreen';
 export { default as SafetyScoreScreen } from './SafetyScoreScreen';
 export { default as GeoFencingAlertsScreen } from './GeoFencingAlertsScreen';
-export { default as PanicButtonScreen } from './PanicButtonScreen';
+// export { default as PanicButtonScreen } from './PanicButtonScreen';
+export { default as AuthorityScreen } from './AuthorityScreen';
+// export { default as AuthorityVerifyScreen } from './AuthorityVerifyScreen';
