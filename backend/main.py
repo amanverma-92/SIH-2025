@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database.connection import engine, Base
-from routes import tourists, alerts, stats, risk_zones
+from routes import tourists, alerts, stats, risk_zones, digital_id
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
@@ -18,10 +18,11 @@ app.add_middleware(
 )
 
 # Include routers
-app.include_router(tourists.router)
-app.include_router(alerts.router)
-app.include_router(stats.router)
-app.include_router(risk_zones.router)
+app.include_router(tourists)
+app.include_router(alerts)
+app.include_router(stats)
+app.include_router(risk_zones)
+app.include_router(digital_id)
 
 @app.get("/")
 def read_root():

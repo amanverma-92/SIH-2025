@@ -1,0 +1,29 @@
+{
+    "name": "blockchain",
+    "version": "1.0.0",
+    "description": "Smart contracts for SIH-2025 Digital ID registry",
+    "main": "index.js",
+    "type": "commonjs",
+    "scripts": {
+      "compile": "hardhat compile",
+      "clean": "hardhat clean",
+      "deploy:amoy": "hardhat run scripts/deploy.mts --network amoy"
+    },
+    "devDependencies": {
+      "@nomicfoundation/hardhat-ethers": "^3.1.0",
+      "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+      "@types/chai": "^4.3.20",
+      "@types/mocha": "^10.0.10",
+      "@types/node": "^20.19.17",
+      "chai": "^4.5.0",
+      "dotenv": "^16.3.1",
+      "ethers": "^6.15.0",
+      "hardhat": "^2.26.3",
+      "ts-node": "^10.9.2",
+      "typescript": "^5.9.2"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+  

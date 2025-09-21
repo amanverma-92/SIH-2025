@@ -46,6 +46,9 @@ class TouristResponse(BaseModel):
     last_location_update: datetime
     emergency_contact: Optional[str]
     created_at: datetime
+    # Digital ID information
+    digital_id: Optional[dict] = None
     
     class Config:
         from_attributes = True
+        extra = "ignore"  # Ignore extra fields

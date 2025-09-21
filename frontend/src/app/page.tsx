@@ -15,6 +15,7 @@ import StatsCards from '@/components/Dashboard/StatsCards';
 import TouristSearch from '@/components/Search/TouristSearch';
 import AlertsFeed from '@/components/Dashboard/AlertsFeed';
 import RiskZoneManager from '@/components/RiskZones/RiskZoneManager';
+import SafetyAnalysisManager from '@/components/SafetyAnalysis/SafetyAnalysisManager';
 import EmergencyAccess from '@/components/Emergency/EmergencyAccess';
 import EFIRForm from '@/components/Emergency/EFIRForm';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -46,7 +47,7 @@ export default function Dashboard() {
     risk_zones: 0,
   });
   const [selectedTourist, setSelectedTourist] = useState<Tourist | null>(null);
-  const [activeTab, setActiveTab] = useState<'tourists' | 'risk-zones'>('tourists');
+  const [activeTab, setActiveTab] = useState<'tourists' | 'risk-zones' | 'safety-analysis'>('tourists');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -216,6 +217,16 @@ export default function Dashboard() {
               >
                 Risk Zone Management
               </button>
+              <button
+                onClick={() => setActiveTab('safety-analysis')}
+                className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                  activeTab === 'safety-analysis'
+                    ? 'border-blue-500 text-blue-600 dark:text-blue-400'
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300'
+                }`}
+              >
+                Safety Analysis
+              </button>
             </nav>
           </div>
         </div>
@@ -246,7 +257,7 @@ export default function Dashboard() {
                 />
               </div>
             </>
-          ) : (
+          ) : activeTab === 'risk-zones' ? (
             <div className="lg:col-span-3">
               <RiskZoneManager
                 riskZones={riskZones}
@@ -254,6 +265,14 @@ export default function Dashboard() {
                 onRiskZoneUpdate={handleUpdateRiskZone}
                 onRiskZoneDelete={handleDeleteRiskZone}
                 loading={loading}
+              />
+            </div>
+          ) : (
+            <div className="lg:col-span-3">
+              <SafetyAnalysisManager
+                tourists={tourists}
+                loading={loading}
+                onAlertCreated={(alert) => setAlerts((prev) => [alert, ...prev])}
               />
             </div>
           )}

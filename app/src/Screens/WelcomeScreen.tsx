@@ -167,16 +167,19 @@ const features = [
     id: "2",
     title: "AI Anomaly Detection",
     description: "Detect unusual activities in real time using advanced AI.",
+    image: require('../assets/ai.png')
   },
   {
     id: "3",
     title: "Police Web Portal",
     description: "24×7 police access for instant monitoring and response.",
+    image: require('../assets/police.png')
   },
   {
     id: "4",
     title: "Surveillance",
     description: "Continuous monitoring through integrated surveillance systems.",
+    image: require('../assets/surveillance.jpeg')
   },
 ];
 
