@@ -23,7 +23,7 @@ This README provides an overview of the project, including team details, relevan
 -Member3 - 2022UCM - [Aman Verma](https://github.com/amanverma-92)  
 -Member4 - 2022UCD - [Vivek Gupta](https://github.com/Vivekgupta008)  
 -Member5 - 2022UCM - [Ashmita Luthra](https://github.com/ashmita-web)  
--Member6 - 2022UIT3062 - [Shobhit Ranjan](#)  
+-Member6 - 2022UIT3062 - [Shobhit Ranjan](https://github.com/ShobhitR07/)  
 
 
 ---
