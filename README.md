@@ -18,12 +18,12 @@ This README provides an overview of the project, including team details, relevan
 
 **Team Members:**  
 
--Member1 - 2022UCD - [Ishaan Gupta](https://github.com/ishaanxgupta)  
+-Member1 - 2022UCD2130 - [Ishaan Gupta](https://github.com/ishaanxgupta)  
 -Member2 - 2022UIT3036 - [Pranshu Lakhotia](https://github.com/PranshuLakhotia)  
--Member3 - 2022UCM - [Aman Verma](https://github.com/amanverma-92)  
--Member4 - 2022UCD - [Vivek Gupta](https://github.com/Vivekgupta008)  
--Member5 - 2022UCM - [Ashmita Luthra](https://github.com/ashmita-web)  
--Member6 - 2022UIT3062 - [Shobhit Ranjan](https://github.com/ShobhitR07/)  
+-Member3 - 2022UCM2351 - [Aman Verma](https://github.com/amanverma-92)  
+-Member4 - 2022UCD2129 - [Vivek Gupta](https://github.com/Vivekgupta008)  
+-Member5 - 2022UCM2347 - [Ashmita Luthra](https://github.com/ashmita-web)  
+-Member6 - 2022UIT3062 - [Shobhit Ranjan](#)  
 
 
 ---
@@ -36,31 +36,41 @@ This README provides an overview of the project, including team details, relevan
 
 ---
 
+## Tasks Accomplished  
+
+- Task 1: Implemented real-time tourist monitoring with AI-based risk detection  
+- Task 2: Integrated geo-fencing alerts for high-risk zones  
+- Task 3: Developed blockchain-based digital ID verification system  
+- Task 4: Created incident reporting and response system  
+- Task 5: Built web dashboard and mobile app integration  
+
+---
+
 ## Tech Stack  
 
-- Frontend: NextJS + Vite  
-- Mobile App: React Native  
-- Backend: FastAPI (Python)  
-- Other: Geo-fencing APIs, AI Models, Blockchain-based Digital ID  
+- Frontend (Mobile App) → React Native (cross-platform)
+- Backend / APIs → FastAPI
+- Blockchain → Hyperledger Fabric / Polygon (for Digital ID)
+- Database → SQL (tourist & itinerary data)
+- AI/ML → Python (Scikit-learn, TensorFlow, anomaly detection models)
+- Geo-Fencing & Maps → Google Maps API / Mapbox SDK
+- Dashboards → Next.js, TypeScript
+- Security → End-to-end encryption, JWT, OAuth2 authentication
 
 ---
 
 ## Key Features  
 
-- Real-time tourist safety monitoring with AI alerts  
-- Geo-fencing for restricted or high-risk zones  
-- Blockchain-based digital ID verification  
-- Incident reporting and response system  
-- Multi-platform support: Mobile App + Web Dashboard  
+- *Real-time Risk Monitoring:* Monitors tourist locations and alerts users of potential risks  
+- *Geo-fencing Alerts:* Notifies users when entering restricted or high-risk areas  
+- *Blockchain-based Digital ID:* Ensures secure identification and authentication of tourists  
+- *Incident Reporting System:* Enables reporting and management of incidents through the app  
+- *Multi-platform Support:* Works on both web dashboard and mobile applications  
 
 ---
-## How to Run Locally  
 
-### Clone the Repository
-```bash
-git clone https://github.com/PranshuLakhotia/SIH-2025.git
-cd SIH-2025
-```
+
+## How to Run Locally  
 
 # Mobile App
 ```bash
@@ -76,26 +86,9 @@ npm install
 npm run dev
 ```
 
-# Backend (FastAPI)
-
-macOS
+# Backend (FastAPI Server)
 ```bash
 cd backend
-python -m venv venv
 source venv/bin/activate
-python -m pip install --upgrade pip
-pip install -r requirements.txt
 python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
-
-```
-
-Windows
-```bash
-cd backend
-python -m venv venv
-.\venv\Scripts\Activate
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
-
 ```
