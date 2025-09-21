@@ -14,15 +14,16 @@ This README provides an overview of the project, including team details, relevan
 
 **Team Name:** Issavibles  
 
-**Team Leader:** @YOUR_USERNAME  
+**Team Leader:** https://github.com/ishaanxgupta
 
 **Team Members:**  
-- Ishaan Gupta – 2022UCD – @USERNAME  
-- Pranshu Lakhotia – 2022UIT3036 – @PranshuLakhotia  
-- Aman Verma – 2022UCM – @USERNAME  
-- Vivek Gupta – 2022UCD – @USERNAME  
-- Ashmita Luthra – 2022UCM – @USERNAME  
-- Shobhit Ranjan – 2022UIT3062 – @USERNAME  
+
+-Member1 - 2022UCD - [Ishaan Gupta](https://github.com/ishaanxgupta)  
+-Member2 - 2022UIT3036 - [Pranshu Lakhotia](https://github.com/PranshuLakhotia)  
+-Member3 - 2022UCM - [Aman Verma](https://github.com/amanverma-92)  
+-Member4 - 2022UCD - [Vivek Gupta](https://github.com/Vivekgupta008)  
+-Member5 - 2022UCM - [Ashmita Luthra](https://github.com/ashmita-web)  
+-Member6 - 2022UIT3062 - [Shobhit Ranjan](#)  
 
 
 ---
