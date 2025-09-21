@@ -12,9 +12,9 @@ This README provides an overview of the project, including team details, relevan
 
 ## Team Details  
 
-**Team Name:** Issavibles  
+**Team Name:** **Issavibles**
 
-**Team Leader:** https://github.com/ishaanxgupta
+**Team Leader:** Ishaan Gupta
 
 **Team Members:**  
 
