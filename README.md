@@ -56,6 +56,12 @@ This README provides an overview of the project, including team details, relevan
 ---
 ## How to Run Locally  
 
+### Clone the Repository
+```bash
+git clone https://github.com/PranshuLakhotia/SIH-2025.git
+cd SIH-2025
+```
+
 # Mobile App
 ```bash
 cd app
@@ -70,9 +76,26 @@ npm install
 npm run dev
 ```
 
-# Backend (FastAPI Server)
+# Backend (FastAPI)
+
+macOS
 ```bash
 cd backend
+python -m venv venv
 source venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
 python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+```
+
+Windows
+```bash
+cd backend
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
 ```
